@@ -4,22 +4,14 @@ import { Layout } from "./components/Layout/Layout";
 function App() {
   return (
     <Layout>
-      <h1>Hello Word</h1>
-      <Card
-        id={1}
-        paragraph='Typescript'
-        details='Typescript para front e back'
-      />
-      <Card
-        id={2}
-        paragraph='HTML'
-        details='HTML para front e back'
-      />
-      <Card
-        id={3}
-        paragraph='SQL'
-        details='SQL para BD'
-      />
+      <h1>Faça Login</h1>
+      <label htmlFor="email">Email</label>
+      <input type="email" name="email" id="email" />
+
+      <label htmlFor="password">senha</label>
+      <input type="password" name="password" id="password"></input>
+
+      <button>Entrar</button>
     </Layout>
   );
 }
