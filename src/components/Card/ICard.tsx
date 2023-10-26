@@ -1,6 +1,6 @@
  interface ICard{
-    id:number,
-    paragraph:string,
+    price:number,
+    name:string,
     details: string
 }
 
