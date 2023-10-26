@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Button, Center, ChakraProvider, Input, Box, Heading } from '@chakra-ui/react'
+import { login } from './services/login/login';
 
 const Box1 = styled.div `
   background-color:orange;
@@ -25,7 +26,7 @@ function App() {
                 <Input margin={'10px'} placeholder="Email" type="password" id="password"/>
               </Center>
               <Center>
-              <Button color={'#fff'} backgroundColor={'#9413dc'} fontWeight={'600'} margin={'20px 0'}>Entrar</Button>
+              <Button onClick={login} color={'#fff'} backgroundColor={'#9413dc'} fontWeight={'600'} margin={'20px 0'}>Entrar</Button>
               </Center>
             </Box>
           </Box>
