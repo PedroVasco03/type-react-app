@@ -1,10 +1,19 @@
-import Card from "./components/Card/Card";
 import { Layout } from "./components/Layout/Layout";
+import styled from 'styled-components'
+
+const Box = styled.div `
+  background-color:orange;
+  border-radius:25px;
+  padding-left:15px;
+`
 
 function App() {
   return (
     <Layout>
-      <h1>Faça Login</h1>
+      <Box>
+        <h1>Faça Login</h1>
+      </Box>
+      
       <label htmlFor="email">Email</label>
       <input type="email" name="email" id="email" />
 
