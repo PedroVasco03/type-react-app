@@ -1,5 +1,4 @@
-import I from './ICard'
-import { Container, Flex, Divider, Card, Image, CardBody, Heading, Text, Stack, Button, CardFooter, ButtonGroup } from '@chakra-ui/react'
+import {  Divider, Card, Image, CardBody, Heading, Text, Stack, Button, CardFooter, ButtonGroup } from '@chakra-ui/react'
 
 const Cards=() => {
     return(

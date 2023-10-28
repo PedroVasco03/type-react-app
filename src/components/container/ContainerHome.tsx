@@ -1,4 +1,4 @@
-import { Container, Flex, Spacer, Card, Alert, AlertDescription, AlertIcon, AlertTitle, Image, CardBody, Heading, Text, Stack, Button, CardFooter } from '@chakra-ui/react'
+import { Flex,  Card,  Image, CardBody, Heading, Text, Stack, Button, CardFooter } from '@chakra-ui/react'
 import logo from '../../assets/images/logo/logo2.png'
 import Cards from '../Card/Cards'
 

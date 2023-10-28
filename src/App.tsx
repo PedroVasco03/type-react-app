@@ -1,15 +1,15 @@
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import { ChakraProvider } from '@chakra-ui/react'
-import { Header } from './components/Header/Header';
 import { ContainerHome } from './components/container/ContainerHome';
-import { useState } from 'react';
 import { Login } from './components/login/login';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout/Layout';
 
-const Box1 = styled.div `
-  background-color:orange;
-  border-radius:25px;
-  padding-left:15px;
-`
+// const Box1 = styled.div `
+//   background-color:orange;
+//   border-radius:25px;
+//   padding-left:15px;
+// `
 
 function App() {
   // const [value, setValue] =useState(0)
@@ -26,7 +26,20 @@ function App() {
 
   return(
     <>
-    <Login/>
+      <BrowserRouter>
+        <ChakraProvider>
+          <Layout>
+            <Routes>
+                <Route path='/' element={
+                  <ContainerHome/>
+                }/>
+                <Route path='/login' element={
+                  <Login/>
+                }/>
+            </Routes> 
+          </Layout>
+        </ChakraProvider>
+      </BrowserRouter>
     </>
   )
 }
