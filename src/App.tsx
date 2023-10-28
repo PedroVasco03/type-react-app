@@ -5,6 +5,7 @@ import { Login } from './components/login/login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
 import { Conta } from './pages/conta/Conta';
+import { ContaInfo } from './pages/conta/ContaInfo.';
 
 // const Box1 = styled.div `
 //   background-color:orange;
@@ -34,8 +35,11 @@ function App() {
                 <Route path='/' element={
                   <ContainerHome/>
                 }/>
-                <Route path='/conta' element={
+                <Route path='/conta/:id' element={
                   <Conta/>
+                }/>
+                <Route path='/Infoconta' element={
+                  <ContaInfo/>
                 }/>
                 <Route path='/login' element={
                   <Login/>

@@ -1,9 +1,11 @@
 import { Box, Center, SimpleGrid, Spinner } from "@chakra-ui/react"
 import { CardInfo } from "../../components/CardInformacoes/CardInfo"
 import { useState, useEffect } from "react"
+import {useParams, useNavigate} from "react-router-dom"
 import { api } from "../../API/api"
 
 interface IUserData{
+    id:string
     email:string
     password:string
     name:string
@@ -14,6 +16,7 @@ interface IUserData{
 export const Conta =()=>{
     const [userData,setUserData] = useState < null | IUserData>()
 
+
     useEffect(()=> {
         const getData = async () =>{
         const data: any | IUserData = await api
@@ -23,8 +26,13 @@ export const Conta =()=>{
         getData()
     }, [])
     const actualData = new Date()
-    console.log(actualData)
-    console.log(userData)
+    
+    const {id}= useParams()
+    const navigate = useNavigate()
+
+    if(userData && id !== userData.id){
+        navigate('/')
+    }
     return(
         <Box minHeight={'100vh'} backgroundColor={'#9413dc'} padding={'30px'}>
            <Center>
