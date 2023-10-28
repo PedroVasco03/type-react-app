@@ -4,6 +4,7 @@ import { ContainerHome } from './components/container/ContainerHome';
 import { Login } from './components/login/login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
+import { Conta } from './pages/conta/Conta';
 
 // const Box1 = styled.div `
 //   background-color:orange;
@@ -32,6 +33,9 @@ function App() {
             <Routes>
                 <Route path='/' element={
                   <ContainerHome/>
+                }/>
+                <Route path='/conta' element={
+                  <Conta/>
                 }/>
                 <Route path='/login' element={
                   <Login/>
