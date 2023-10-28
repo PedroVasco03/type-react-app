@@ -1,6 +1,14 @@
+import { useState } from 'react';
+import { login } from '../../services/login/login';
 import { Box, Center, Input, Button, Heading } from "@chakra-ui/react"
+import { DButton } from '../DButton/DButton';
 
-export const login = () =>{
+export const Login = () =>{
+  const [email, setEmail]= useState('')
+  console.log('email digitado', email)
+  const logar = ()=>{
+    alert(email)
+  }
     return(
         <Box minHeight={'100vh'} backgroundColor={'#9413dc'} padding={'30px'}>
             <Box backgroundColor={'#ffffff'} padding={'20px'} borderRadius={'20px'}>
@@ -9,7 +17,9 @@ export const login = () =>{
               </Center>
               <Center>
                 <label htmlFor="email">Email</label>
-                <Input margin={'10px'} placeholder="Email" type="email" id="email"/>
+                <Input margin={'10px'} placeholder="Email" value={email} onChange={(event)=>{ setEmail(event.target.value)
+                  console.log(event)
+                  }} type="email" id="email"/>
               </Center>
               
               <Center>
@@ -17,7 +27,7 @@ export const login = () =>{
                 <Input margin={'10px'} placeholder="Email" type="password" id="password"/>
               </Center>
               <Center>
-              <Button onClick={login} color={'#fff'} backgroundColor={'#9413dc'} fontWeight={'600'} margin={'20px 0'}>Entrar</Button>
+                <DButton onClick={() => (login(email))}/>
               </Center>
             </Box>
           </Box>
